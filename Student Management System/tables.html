@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="tables.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Student Details</div>
+    <div class="content">
+      <form action="#" onsubmit=addForm()>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Student Name</span>
+            <output id="studentName" type="text" placeholder="Enter Student Name" autocomplete="off" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Student ID</span>
+            <output id="studentId"type="text" placeholder="Enter Student ID" autocomplete="off" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Student marks</span>
+            <output id="studentMarks" type="text" placeholder="Enter Student marks" autocomplete="off" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Student Course</span>
+            <output  id="studentCourse" type="text" placeholder="Enter Student Course" autocomplete="off" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Student Attendance</span>
+            <output  id="studentAttendence" type="text" placeholder="Enter Student Attendance" autocomplete="off" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Student result</span>
+            <output  id="studentResult" type="text" placeholder="Student result Pass/Fail" autocomplete="off" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Gender</span>
+            <output  id="gender" type="text" placeholder='Gender' autocomplete="off" required>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const id = urlParams.get('id')
+    function display(id){
+        var str  = localStorage.getItem("localData")
+        if(id!="null"){
+            if(str!=null)
+                var arr1 = JSON.parse(str)
+            for( var arr2 of arr1) {
+                if(arr2.Id == id ){
+                  document.getElementById("studentName").innerHTML = "<input type='button'  value=" + arr2.Name+">"
+                  document.getElementById("studentId").innerHTML = "<input type='button' value=" + arr2.Id+">"
+                  document.getElementById("studentMarks").innerHTML = "<input type='button' value=" + arr2.Marks+">"
+                  document.getElementById("studentCourse").innerHTML = "<input type='button' value=" + arr2.Course+">"
+                  document.getElementById("studentAttendence").innerHTML = "<input type='button' value=" + arr2.Attendence+">"
+                  document.getElementById("studentResult").innerHTML = "<input type='button' value=" + arr2.Result+">"
+                  document.getElementById("gender").innerHTML = "<input type='button' value=" + arr2.Gender+">"
+                }
+
+            }
+        }
+        else{
+            alert("Invalid id")
+        }
+      }
+      display(id)
+  </script>
+</body>
+</html>

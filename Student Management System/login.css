@@ -1,0 +1,46 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url(Wallpaper.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* overflow: hidden; */
+  z-index: -1;
+}
+.test {
+  font-weight: 500;
+  font-size: 60px;
+}
+.motto {
+  color: black;
+  letter-spacing: 6px;
+}
+#footer {
+  background-color: black;
+  color: rgb(163, 163, 163);
+  font-size: 11px;
+  letter-spacing: 3px;
+  z-index: 1;
+  position: relative;
+}
+tr,
+td,
+table {
+  border: 1px solid gray;
+  border-collapse: collapse;
+  padding: 10px 30px 10px 30px;
+}
+tr:hover {
+  background-color: #1f1f1f1f;
+}
+a {
+  text-decoration: none;
+}
+#asocial {
+  text-decoration: none;
+  color: white;
+}
+.map {
+  border-radius: 20px;
+  box-shadow: 15px 15px 15px black;
+}

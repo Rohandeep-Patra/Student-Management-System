@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="table-view" >
+        <table>
+            <tr>
+                <td >
+                    <div>Name</div>
+                </td>
+                <td>
+                    <div>ID</div>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <div id="name1" onload=display()>h1</div>
+                </td>
+                <td>
+                    <div id = "id1">h2</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function display(name){
+        var str  = localStorage.getItem("localData")
+        if(name!=null){
+            if(str!=null)
+                var arr1 = JSON.parse(str)
+            for( var arr2 of arr1) {
+                if(arr2.Name == name ){
+                    document.getElementById("name1").innerHTML = arr2.Name
+                    document.getElementById("id1").innerHTML = arr2.Id
+                }
+
+            }
+        }
+        else{
+            console.log(JSON.parse(str))
+        }
+      }
+      display("yogesh")
+    </script>
+</body>
+
+</html>

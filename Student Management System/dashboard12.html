@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>DASHBOARD</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="country.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif;
+
+}
+.mySlides {display: none}
+h1{
+  font-size: 2vw;
+  font-weight: 500;
+  font-family:Arial, Helvetica, sans-serif;
+}
+h2{
+  font-size: 2vw;
+  color: azure;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.round{
+  border-radius: 3%;
+}
+#grad1 {
+  height: 150px;
+  width:100%;
+    background-image: linear-gradient(to right, rgba(255,0,0,0.5), rgba(255,0,0,1));
+}
+#grad2 {
+  width:100%;
+  height: 150px;
+    background-image: linear-gradient(to right, rgba(17, 139, 8, 0.4), rgb(12, 135, 16));
+}
+#grad3 {
+  width:100%;
+  height: 150px;
+  background-image: linear-gradient(to right, rgba(8, 19, 135, 0.4), rgb(4, 13, 173));
+}
+#grad4 {
+  width:100%;
+  height: 150px;
+  background-image: linear-gradient(to right, rgba(213, 245, 73, 0.4), rgb(223, 230, 25));
+}
+.button-dash{
+  opacity: 0.3;
+  margin-top:-6vw; 
+  font-size: 5vw;
+  color: azure;
+  margin-left: 10px;
+}
+.margin-left-button{
+      margin-left: -7vw;
+}
+a{
+  text-decoration: none;
+}
+</style>
+</head>
+<body class="light-grey content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="sidebar collapse white animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="container">
+    <a href="#" onclick="close()" class="hide-large right jumbo padding hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="image.jpeg" style="width:100%;margin-top: -9vw;" ><br><br>
+    <h4><b>Welcome</b></h4>
+  </div>
+  <div class="bar-block">
+    <a href="#" onclick="close()" class="bar-item button padding text-teal"><i class="fa fa-user fa-fw margin-right"></i>STUDENT DASHBOARD</a> 
+    <a href="#" onclick="close()" class="bar-item button padding"><i class="fa fa-th-large fa-fw margin-right"></i>MAIN MENU</a> 
+    <a href="#" onclick="close()" class="bar-item button padding"><i class="fa fa-envelope fa-fw margin-right"></i>CONTACT</a>
+  </div>
+  
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="overlay hide-large animate-opacity" onclick="close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <span class="button hide-large xxlarge hover-text-grey" onclick="open()"><i class="fa fa-bars"></i></span>
+    <div class="container">
+    <h1><b>User</b></h1>
+    <div class="section bottombar padding-16">
+      <span class="margin-right">Go To:</span> 
+      <button class="button gray"><i class="fa fa-user margin-right"></i>Dashboard</button>
+      <button class="button white hide-small"><i class="fa fa-th-large margin-right"></i>Menu</button>
+      <button class="button white hide-small"><i class="fa fa-envelope margin-right"></i>Contact</button>
+    </div>
+    </div>
+  </header>
+  
+  <!-- First Photo Grid-->
+  <div class="row-padding">
+    <h1><b>Welcome to Student Dashboard</b></h1>
+
+    <div class="quarter container ">
+      <div class="container hover-opacity round center" id="grad1">
+        <h2><a href="Add Form.html"><b>Add Record</b></a></h2>
+        <i class="fa fa-book right button-dash" style="margin-top: -1vw;"></i>
+
+      </div>
+      <i class="fa fa-plus  button-dash" ></i>
+    </div>
+
+    <div class="quarter container ">
+      <div class="container hover-opacity round center" id="grad2">
+        <h2><a href="Delete Form.html"><b>Delete Record</b></a></h2>
+        <i class="fa fa-pencil right button-dash" style="margin-top: -1vw;"></i>
+
+      </div>
+      <i class="fa fa-minus  button-dash" ></i>
+    </div>
+
+    <div class="quarter  container">
+      <div class="container hover-opacity round center" id="grad3">
+        <h2><a href="viewAll.html"><b>Student List</b></a></h2>
+        <i class="fa fa-group right button-dash" style="margin-top: -1vw;"></i>
+
+      </div>
+      <i class="fa fa-list  button-dash" ></i>
+    </div>
+
+    <div class="quarter container margin-bottom">
+      <div class="container hover-opacity round center" id="grad4">
+        <h2><b>Student Info</b></h2>
+        <i class="fa fa-info right button-dash" style="margin-top: -1vw;"></i>
+
+      </div>
+      <i class="fa fa-list  button-dash" ></i>
+    </div>
+   
+  </div>
+
+  
+   
+
+  
+
+<script>
+// Script to open and close sidebar
+function open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
